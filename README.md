@@ -29,7 +29,7 @@ Select a chapter to see the distribution through an interactive pie chart. Click
 
 ## Live Demo
 
-https://shiny-naiad-73e363.netlify.app/
+(https://cool-kheer-aaa2d7.netlify.app/)
 
 ## Explainer Video
 
