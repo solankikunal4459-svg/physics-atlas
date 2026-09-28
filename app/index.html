@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f3ef">
+  <title>Physics Atlas — NCERT Class 11 & 12</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']] },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-frame">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Physics Atlas home">
+        <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+        <span><strong>Physics Atlas</strong><small>NCERT · CLASS 11 &amp; 12</small></span>
+      </a>
+      <div class="source-note"><span class="source-dot"></span>From Database A</div>
+    </header>
+
+    <main id="app" class="app-shell" aria-live="polite">
+      <section id="workspace" class="workspace" aria-label="Chapter overview and category details">
+        <section id="chartDock" class="chart-dock" aria-label="Chapter category chart">
+          <div class="chart-heading">
+            <div class="overline" id="classLabel">CLASS 11 · PHYSICS</div>
+            <h1 id="chapterTitle">Loading chapter…</h1>
+            <p id="chapterBook" class="chapter-book"></p>
+          </div>
+          <div class="chart-stage">
+            <svg id="pieChart" class="pie-chart" viewBox="0 0 320 320" role="group" aria-label="Interactive category pie chart"></svg>
+            <div id="chartCenter" class="chart-center" aria-hidden="true">
+              <span>CHAPTER TOTAL</span>
+              <strong id="totalCount">—</strong>
+              <small>records</small>
+            </div>
+          </div>
+          <div id="categoryLegend" class="category-legend" aria-label="Category counts"></div>
+          <div id="overviewHint" class="overview-hint">Select a slice to explore its records <span aria-hidden="true">↗</span></div>
+        </section>
+
+        <aside id="chapterRail" class="chapter-rail" aria-label="Choose a chapter">
+          <div class="rail-heading"><span>CHAPTER</span><span class="rail-swipe" aria-hidden="true">↕</span></div>
+          <nav id="chapterList" class="chapter-list" aria-label="Class and chapter list"></nav>
+        </aside>
+
+        <section id="detailPanel" class="detail-panel" aria-hidden="true" aria-label="Category records">
+          <div class="detail-topline">
+            <div>
+              <div class="overline" id="detailContext">CLASS 11 · CHAPTER 1</div>
+              <h2 id="detailTitle">Definitions</h2>
+            </div>
+            <button id="closeDetail" class="close-button" type="button" aria-label="Close category details" title="Close details">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+          <div class="detail-count"><span id="detailCount">0 records</span><span id="detailPercent">0%</span></div>
+          <div id="detailRecords" class="detail-records" tabindex="0"></div>
+          <div class="swipe-cue"><span class="swipe-line" aria-hidden="true">←</span> Swipe right from the left edge to close</div>
+        </section>
+      </section>
+      <div id="errorState" class="error-state" hidden>
+        <strong>Database A could not be loaded.</strong>
+        <span>Open this app through a local web server so it can read <code>../data/database_A/database_A.json</code>.</span>
+      </div>
+    </main>
+    <footer class="footer"><span>Explore the ideas chapter by chapter.</span><span>NCERT PHYSICS</span></footer>
+  </div>
+</body>
+</html>
